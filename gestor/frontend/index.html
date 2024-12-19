@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <h1>Gestor de Inventario</h1>
+
+    <!-- Formulario para registrar productos -->
+    <section id="registro-productos">
+        <h2>Registrar Producto</h2>
+        <form id="producto-form">
+            <input type="text" id="nombre" placeholder="Nombre del producto (Ej: Laptop Dell XPS 13)" required>
+            <input type="text" id="categoria" placeholder="Categoría (Ej: Electrónica, Alimentos)">
+            <textarea id="descripcion" placeholder="Descripción detallada del producto (Opcional)"></textarea>
+            <input type="number" id="precio" placeholder="Precio Unitario (Ej: 999.99)" step="0.01" required>
+            <input type="number" id="stock" placeholder="Stock Inicial (Ej: 50)" required>
+            <input type="text" id="proveedor" placeholder="Proveedor (Opcional, Ej: Proveedor A)">
+            <input type="date" id="fecha_vencimiento">
+            <input type="number" id="nivel_reorden" placeholder="Nivel de Reorden (Ej: 10)">
+            <input type="text" id="unidad_medida" placeholder="Unidad de Medida (Ej: Pieza, Kg, Litro)">
+            <input type="text" id="ubicacion" placeholder="Ubicación (Ej: Estante A3, Almacén 2)">
+            <input type="text" id="imagen_url" placeholder="URL de Imagen (Opcional, Ej: https://example.com/laptop.jpg)">
+            <textarea id="notas" placeholder="Notas adicionales (Opcional)"></textarea>
+            <input type="text" id="rfid" placeholder="Esperando RFID..." readonly>
+            <button type="submit">Registrar</button>
+        </form>
+        <p id="mensaje-registro"></p>
+    </section>
+
+    <!-- Estadísticas -->
+    <section id="estadisticas">
+        <h2>Estadísticas</h2>
+        <div id="estadisticas-container">
+            <!-- Las estadísticas se cargarán dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Productos con Bajo Stock -->
+    <section id="bajo-stock">
+        <h2>Productos con Bajo Stock</h2>
+        <div id="bajo-stock-container">
+            <!-- Los productos con bajo stock se cargarán dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Lista de productos -->
+    <section id="productos">
+        <h2>Lista de Productos</h2>
+        <div id="lista-productos"></div>
+    </section>
+
+    <script src="/frontend/app.js"></script>
+</body>
+</html>
