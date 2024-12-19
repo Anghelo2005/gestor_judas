@@ -1,1 +1,5 @@
+# Configurar el archivo predeterminado
+DirectoryIndex frontend/index.html
 
+# Redirección para evitar la lista de directorios
+Options -Indexes
